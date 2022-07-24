@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:context="http://www.springframework.org/schema/context"
+       xmlns:mvc="http://www.springframework.org/schema/mvc"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd http://www.springframework.org/schema/context https://www.springframework.org/schema/context/spring-context.xsd http://www.springframework.org/schema/mvc https://www.springframework.org/schema/mvc/spring-mvc.xsd">
+
+    <!--添加包扫描-->
+    <context:component-scan base-package="com.kakuab.controller"></context:component-scan>
+    <context:component-scan base-package="com.kakuab.settings.controller"></context:component-scan>
+    <context:component-scan base-package="com.kakuab.workbench.controller"></context:component-scan>
+    <mvc:default-servlet-handler /><!--静态资源释放-->
+    <!--添加注解驱动-->
+    <mvc:annotation-driven></mvc:annotation-driven>
+    <!--配置视图解析器-->
+    <bean class="org.springframework.web.servlet.view.InternalResourceViewResolver">
+        <property name="prefix" value="/WEB-INF/pages/"></property>
+        <property name="suffix" value=".jsp"></property>
+    </bean>
+    <!--配置拦截器-->
+    <mvc:interceptors>
+        <mvc:interceptor>
+            <!--拦截的请求-->
+            <mvc:mapping path="/settings/**"/>
+            <mvc:mapping path="/workbench/**"/>
+            <!--放行的请求-->
+            <mvc:exclude-mapping path="/settings/qx/user/toLogin.do"/>
+            <mvc:exclude-mapping path="/settings/qx/user/login.do"/>
+            <bean class="com.kakuab.settings.interceptor.InterceptorLogin" />
+        </mvc:interceptor>
+    </mvc:interceptors>
+    <!--配置文件上传解析器 id必须是multipartResolver-->
+    <bean id="multipartResolver" class="org.springframework.web.multipart.commons.CommonsMultipartResolver">
+        <property name="maxUploadSize" value="#{1024*1024*5}"/>
+        <property name="defaultEncoding" value="utf-8"/>
+    </bean>
+</beans>

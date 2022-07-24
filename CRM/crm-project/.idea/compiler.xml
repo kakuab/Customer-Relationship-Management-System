@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="CompilerConfiguration">
+    <annotationProcessing>
+      <profile name="Maven default annotation processors profile" enabled="true">
+        <sourceOutputDir name="target/generated-sources/annotations" />
+        <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
+        <outputRelativeToContentRoot value="true" />
+        <module name="springboot-test01" />
+        <module name="crm" />
+        <module name="SpringMVC-Test03-ssm" />
+        <module name="springboot-test02" />
+        <module name="SpringMVC-Test02" />
+        <module name="crm-mybatis-generator" />
+      </profile>
+    </annotationProcessing>
+    <bytecodeTargetLevel target="8">
+      <module name="crm" target="1.8" />
+      <module name="crm-mybatis-generator" target="1.8" />
+      <module name="SpringBoot-test01" target="1.8" />
+      <module name="springboot-test01" target="1.8" />
+      <module name="springboot-test02" target="1.8" />
+      <module name="SpringMVC-Test02" target="1.8" />
+      <module name="SpringMVC-Test03-ssm" target="1.8" />
+      <module name="test01-springboot" target="1.8" />
+      <module name="test02-springboot" target="1.8" />
+    </bytecodeTargetLevel>
+  </component>
+  <component name="JavacSettings">
+    <option name="ADDITIONAL_OPTIONS_OVERRIDE">
+      <module name="springboot-test01" options="-parameters" />
+      <module name="springboot-test02" options="-parameters" />
+      <module name="test01-springboot" options="-parameters" />
+    </option>
+  </component>
+</project>

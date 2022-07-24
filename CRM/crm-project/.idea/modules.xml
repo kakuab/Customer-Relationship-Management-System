@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/../../SpringMVC/SpringMVC-Test02/SpringMVC-Test02.iml" filepath="$PROJECT_DIR$/../../SpringMVC/SpringMVC-Test02/SpringMVC-Test02.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../../SpringMVC/SpringMVC-Test03-ssm/SpringMVC-Test03-ssm.iml" filepath="$PROJECT_DIR$/../../SpringMVC/SpringMVC-Test03-ssm/SpringMVC-Test03-ssm.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../crm/crm.iml" filepath="$PROJECT_DIR$/../crm/crm.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../crm-mybatis-generator/crm-mybatis-generator.iml" filepath="$PROJECT_DIR$/../crm-mybatis-generator/crm-mybatis-generator.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../../SpringBoot/springboot-test01/springboot-test01.iml" filepath="$PROJECT_DIR$/../../SpringBoot/springboot-test01/springboot-test01.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../../SpringBoot/springboot-test02/springboot-test02.iml" filepath="$PROJECT_DIR$/../../SpringBoot/springboot-test02/springboot-test02.iml" />
+    </modules>
+  </component>
+</project>
